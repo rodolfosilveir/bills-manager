@@ -23,8 +23,8 @@ Assim como todo projeto *Gradle*, é necessário primeiramente realizarmos a ger
 Executar os comandos docker abaixo
 
 ```bash
-docker-compose build
-docker-compose up
+docker compose build
+docker compose up
 ```
 
 # Executando e testando
