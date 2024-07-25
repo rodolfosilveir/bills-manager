@@ -40,6 +40,7 @@ Tambem tem um arquivo CSV de exemplo para requisição de importação chamado c
 
 # cURLs de exemplo
 
+- Login (Utilizar o token gerado no campo header Authorization substituindo ••••••)
 ```bash
 curl --location 'http://localhost:8080/auth/login' \
 --header 'Content-Type: application/json' \
@@ -48,16 +49,23 @@ curl --location 'http://localhost:8080/auth/login' \
     "password": "admin123"
 }'
 ```
-
+- Cadastrar Conta
 ```bash
 curl --location 'http://localhost:8080/conta' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: ••••••' \
 --data '{
-    "dataVencimento": "2024-06-19",
-    "dataPagamento": "2024-06-15",
+    "dataVencimento": "2024-08-19",
+    "dataPagamento": "2024-08-15",
     "valor": 125.58,
-    "descricao": "descricao feita no docker 2",
+    "descricao": "descricao",
     "situacao": "a vencer"
 }'
+```
+
+- Obter Contas
+```bash
+curl --location 'http://localhost:8080/conta?page=0&size=5' \
+--header 'Accept: application/json' \
+--header 'Authorization: ••••••'
 ```

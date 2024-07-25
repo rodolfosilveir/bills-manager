@@ -46,7 +46,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoLWFwaSIsInN1YiI6ImFkbWluIiwiZXhwIjoxNzIxODM2ODEzfQ.hM7BAcj00Rv5vu5i6iShNL3oLCcD-2yF-VyalL56Iik",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoLWFwaSIsInN1YiI6ImFkbWluIiwiZXhwIjoxNzIxODg1NTU1fQ.VBvwCQ6-Y5WORLy7pFMFu9cq8MLn3Q59NOUarZzQAAY",
 									"type": "string"
 								}
 							]
@@ -55,7 +55,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"login\": \"admin\",\r\n    \"password\": \"admin123\",\r\n    \"role\": \"ADMIN\"\r\n}",
+							"raw": "{\r\n    \"login\": \"simpleuser\",\r\n    \"password\": \"simpleuser123\",\r\n    \"role\": \"USER\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -99,7 +99,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"dataVencimento\": \"2024-06-19\",\r\n    \"dataPagamento\": \"2024-06-15\",\r\n    \"valor\": 125.58,\r\n    \"descricao\": \"descricao feita no docker 2\",\r\n    \"situacao\": \"a vencer\"\r\n}",
+							"raw": "{\r\n    \"dataVencimento\": \"2024-08-19\",\r\n    \"dataPagamento\": \"2024-08-15\",\r\n    \"valor\": 125.58,\r\n    \"descricao\": \"descricao\",\r\n    \"situacao\": \"a vencer\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -137,7 +137,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"dataVencimento\": \"2024-10-10\",\r\n    \"dataPagamento\": \"2024-12-12\",\r\n    \"valor\": 999.58,\r\n    \"descricao\": \"descricao alterada\"\r\n}",
+							"raw": "{\r\n    \"dataVencimento\": \"2024-12-30\",\r\n    \"dataPagamento\": \"2024-12-20\",\r\n    \"valor\": 999.58,\r\n    \"descricao\": \"descricao alterada\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -145,7 +145,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/conta/12",
+							"raw": "http://localhost:8080/conta/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -153,7 +153,7 @@
 							"port": "8080",
 							"path": [
 								"conta",
-								"12"
+								"1"
 							]
 						}
 					},
@@ -184,7 +184,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/conta/12",
+							"raw": "http://localhost:8080/conta/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -192,7 +192,7 @@
 							"port": "8080",
 							"path": [
 								"conta",
-								"12"
+								"1"
 							]
 						}
 					},
@@ -206,7 +206,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoLWFwaSIsInN1YiI6ImFkbWluIiwiZXhwIjoxNzIxODM2ODEzfQ.hM7BAcj00Rv5vu5i6iShNL3oLCcD-2yF-VyalL56Iik",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoLWFwaSIsInN1YiI6ImFkbWluIiwiZXhwIjoxNzIxODg1NTU1fQ.VBvwCQ6-Y5WORLy7pFMFu9cq8MLn3Q59NOUarZzQAAY",
 									"type": "string"
 								}
 							]
@@ -219,7 +219,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/conta?page=0&size=5",
+							"raw": "http://localhost:8080/conta?descricao=descricao&dataVencimento=2024-10-19&page=0&size=5",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -231,13 +231,11 @@
 							"query": [
 								{
 									"key": "descricao",
-									"value": "descricao alterada",
-									"disabled": true
+									"value": "descricao"
 								},
 								{
 									"key": "dataVencimento",
-									"value": "2024-10-10",
-									"disabled": true
+									"value": "2024-10-19"
 								},
 								{
 									"key": "page",
@@ -273,7 +271,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/conta/20",
+							"raw": "http://localhost:8080/conta/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -281,7 +279,7 @@
 							"port": "8080",
 							"path": [
 								"conta",
-								"20"
+								"1"
 							]
 						}
 					},
@@ -308,7 +306,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/conta/valorTotal?dataPagamentoInicio=2024-10-10&dataPagamentoFim=2024-10-10",
+							"raw": "http://localhost:8080/conta/valorTotal?dataPagamentoInicio=2024-06-10&dataPagamentoFim=2024-12-10",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -321,11 +319,11 @@
 							"query": [
 								{
 									"key": "dataPagamentoInicio",
-									"value": "2024-10-10"
+									"value": "2024-06-10"
 								},
 								{
 									"key": "dataPagamentoFim",
-									"value": "2024-10-10"
+									"value": "2024-12-10"
 								}
 							]
 						}
@@ -345,7 +343,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoLWFwaSIsInN1YiI6ImFkbWluIiwiZXhwIjoxNzIxODM2ODEzfQ.hM7BAcj00Rv5vu5i6iShNL3oLCcD-2yF-VyalL56Iik",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoLWFwaSIsInN1YiI6ImFkbWluIiwiZXhwIjoxNzIxODg1NTU1fQ.VBvwCQ6-Y5WORLy7pFMFu9cq8MLn3Q59NOUarZzQAAY",
 									"type": "string"
 								}
 							]

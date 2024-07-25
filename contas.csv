@@ -1,3 +1,6 @@
 dataVencimento;dataPagamento;valor;descricao;situacao
-2024-12-31;2024-11-30;1234.56;Descrição 1;pago
-2024-10-15;2024-11-14;789.01;Descrição 2;pago
+2024-12-31;2024-11-30;1234.56;conta importacao;pago
+2024-10-15;2024-10-14;789.01;conta importacao;pago
+2024-09-10;2024-09-10;256.00;conta importacao;pago
+2024-11-10;2024-11-10;200.00;descricao;pago
+2024-10-18;2024-10-16;478.31;descricao;pago
