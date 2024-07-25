@@ -1,8 +1,8 @@
 FROM gradle:7.5.0-jdk17 AS build
 COPY . /app
 WORKDIR /app
-RUN chmod +x gradlew
-RUN ./gradlew build
+#RUN chmod +x gradlew
+#RUN ./gradlew build
 
 # Etapa de execução
 FROM openjdk:17-jdk-slim
