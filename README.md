@@ -26,6 +26,11 @@ Executar os comandos docker abaixo
 docker compose build
 docker compose up
 ```
+# Documentação Swagger
+
+É possivel acessar os endpoints disponiveis para visualização no seguinte endereço, depois que o container estiver rodando
+
+http://localhost:8080/swagger-ui/index.html
 
 # Executando e testando
 
