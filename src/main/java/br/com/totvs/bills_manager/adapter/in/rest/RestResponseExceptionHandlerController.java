@@ -18,6 +18,7 @@ import br.com.totvs.bills_manager.adapter.in.rest.response.DefaultResponse;
 import br.com.totvs.bills_manager.domain.exception.BillNotFoundException;
 import br.com.totvs.bills_manager.domain.exception.ImportCsvException;
 import br.com.totvs.bills_manager.domain.exception.InvalidSituationException;
+import br.com.totvs.bills_manager.domain.exception.RoleNotFoundException;
 import br.com.totvs.bills_manager.domain.exception.UserAlreadyExistsException;
 import lombok.extern.log4j.Log4j2;
 
@@ -25,7 +26,8 @@ import lombok.extern.log4j.Log4j2;
 @RestControllerAdvice
 public class RestResponseExceptionHandlerController {
 
-    @ExceptionHandler(value = {UserAlreadyExistsException.class, BillNotFoundException.class, InvalidSituationException.class, ImportCsvException.class})
+    @ExceptionHandler(value = {UserAlreadyExistsException.class, BillNotFoundException.class, 
+        InvalidSituationException.class, ImportCsvException.class, RoleNotFoundException.class})
     protected ResponseEntity<DefaultResponse<Object>> handleBadRequestValidationExceptions(RuntimeException ex, WebRequest request) {
 
         log.error("Bad request error. {}", ex.getMessage(), ex);

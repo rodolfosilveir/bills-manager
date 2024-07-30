@@ -1,6 +1,7 @@
 package br.com.totvs.bills_manager.domain.model;
 
 import br.com.totvs.bills_manager.domain.exception.InvalidSituationException;
+import lombok.Generated;
 import lombok.Getter;
 
 public enum Situacao {
@@ -24,5 +25,14 @@ public enum Situacao {
         }
 
         throw new InvalidSituationException(text);
+    }
+
+    @Generated
+    public static String getDescriptions() {
+        StringBuilder descriptions = new StringBuilder();
+        for (Situacao situacao: Situacao.values()) {
+            descriptions.append("'").append(situacao.getText()).append("', ");
+        }
+        return descriptions.substring(0, descriptions.length() - 2);
     }
 }

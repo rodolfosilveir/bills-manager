@@ -110,7 +110,7 @@ class AuthenticationServiceTest {
             authenticationService.registerUser(request);
         });
 
-        assertEquals("Role '" + role + "' não é encontrada", e.getMessage());
+        assertEquals("Role '" + role + "' não permitida. Roles permitidas: 'admin', 'user'", e.getMessage());
     }
     
 }

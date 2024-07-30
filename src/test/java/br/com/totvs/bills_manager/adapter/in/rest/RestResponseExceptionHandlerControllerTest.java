@@ -61,7 +61,6 @@ class RestResponseExceptionHandlerControllerTest {
         List<ObjectError> errors = Arrays.asList(new ObjectError("field", "Erro de validação"));
         when(bindingResult.getAllErrors()).thenReturn(errors);
 
-        @SuppressWarnings("null")
         MethodArgumentNotValidException ex = new MethodArgumentNotValidException(null, bindingResult);
 
         ResponseEntity<Object> response = exceptionHandler.handleArgumentsInvalidsExceptions(ex);

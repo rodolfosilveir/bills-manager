@@ -10,11 +10,13 @@ import org.springframework.web.multipart.MultipartFile;
 
 import br.com.totvs.bills_manager.port.in.CsvImporteUC;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 
 @RequestMapping("/csv")
 @RestController
 @RequiredArgsConstructor
+@Tag(name = "Importação CSV", description = "Operações relacionadas a importação de dados baseados em CSV")
 public class CsvImporterController {
 
     private final CsvImporteUC csvImportUC;

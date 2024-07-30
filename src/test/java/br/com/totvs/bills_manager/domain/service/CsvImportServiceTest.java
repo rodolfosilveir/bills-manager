@@ -58,7 +58,7 @@ class CsvImportServiceTest {
 
         ImportCsvException e = assertThrows(ImportCsvException.class, () -> csvImportService.bills(mockFile));
 
-        assertEquals("Erro ao importar o arquivo contas.csv. Situação 'A PAGAR' não é uma situação válida", e.getMessage());
+        assertEquals("Erro ao importar o arquivo contas.csv. Situação 'A PAGAR' não é uma situação válida. Valores válidos: 'a vencer', 'em atraso', 'pago' ", e.getMessage());
     }
 
     

@@ -1,6 +1,7 @@
 package br.com.totvs.bills_manager.domain.model;
 
 import br.com.totvs.bills_manager.domain.exception.RoleNotFoundException;
+import lombok.Generated;
 import lombok.Getter;
 
 public enum Role {
@@ -23,6 +24,15 @@ public enum Role {
         }
 
         throw new RoleNotFoundException(text);
+    }
+
+    @Generated
+    public static String getDescriptions() {
+        StringBuilder descriptions = new StringBuilder();
+        for (Role role: Role.values()) {
+            descriptions.append("'").append(role.getText()).append("', ");
+        }
+        return descriptions.substring(0, descriptions.length() - 2);
     }
     
 }

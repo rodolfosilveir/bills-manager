@@ -32,7 +32,11 @@ docker compose up
 
 http://localhost:8080/swagger-ui/index.html
 
-# Executando e testando
+Depois, na sessão 'Autenticação', executar a operação de Login, e com o token, utlizar no botão 'Authorize' no canto superior direito
+Colar o token no campo 'Value', clica em 'Authorize' e depois 'Close'
+A partir desse momento, qualquer operação da aplicação estará autenticada e poderá ser executada
+
+# Executando e testando com Postman
 
 Existe um arquivo postman 'Contas de Pagamento.postman_collection.json' na raiz do projeto com todas as operações disponiveis
 É necessario autenticar com o usuario admin que ja esta configurado no ambiente, pegar o token e setar nas demais requisições como Bearer

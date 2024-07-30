@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.core.annotation.Order;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -31,6 +32,7 @@ import br.com.totvs.bills_manager.domain.model.Bill;
 import br.com.totvs.bills_manager.port.in.FindBillUC;
 import br.com.totvs.bills_manager.port.in.PersistBillUC;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -39,6 +41,8 @@ import lombok.extern.log4j.Log4j2;
 @RequestMapping("/conta")
 @RestController
 @RequiredArgsConstructor
+@Tag(name = "Contas de pagamento", description = "Operações relacionadas gestão de contas de pagamento")
+@Order(2)
 public class BillManagerController {
 
     private final PersistBillUC persistBillUC;
